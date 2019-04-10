@@ -16,7 +16,7 @@ import { ListManagerComponent } from './list-manager/list-manager.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [TodoItemComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
