@@ -7,7 +7,7 @@ import {TodoItem} from "./interfaces/todo-item";
     <h1>
       Welcome to {{ title }}!
     </h1>
-    <app-input-button-unit></app-input-button-unit>
+    <app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>
     <ul>
       <li *ngFor="let todoItem of todoList">
         <app-todo-item [item]="todoItem"></app-todo-item>
@@ -24,4 +24,8 @@ export class AppComponent {
     {title: 'vask bil'},
     {title: 'gå på wc'}
   ];
+
+  addItem(title: string) {
+    this.todoList.push({title});
+  }
 }
